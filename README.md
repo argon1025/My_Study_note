@@ -1,4 +1,4 @@
-# My Study note
+# :rocket:My Study note
 
 :kr: 공부한 기록
 :us: record of what I have studied
