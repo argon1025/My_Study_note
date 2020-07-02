@@ -1,0 +1,15 @@
+<script>
+        function OnMouseIn(elem) {
+            elem.style.border = "2px solid red";
+        }
+        function OnMouseOut(elem) {
+            elem.style.border = "";
+        }
+        function alrtname(){
+            alert(document.dog.name);
+        }
+</script>
+<body>
+    <img id="image" src="poodle.png" width="200px"name="dog" onmouseover="OnMouseIn(this)" onmouseout="OnMouseOut (this)">
+    <button onclick="alrtname()">무슨그림?</button>
+</body>

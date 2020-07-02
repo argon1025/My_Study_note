@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function calc(type) {
+            x = Number(document.getElementById("number1").value);
+            y = Number(document.getElementById("number2").value);
+            console.log(x);console.log(y);
+            if (type == 1)
+                z = x+y;
+            else if (type == 2)
+                z = x-y;
+            else if (type == 3)
+                z =x*y;
+            else if (type == 4)
+                z = x/y;
+            else if (type == 5)
+                z = x%y;
+            else if (type == 6)
+                z = x^y;
+
+            document.getElementById("total").value = z;
+            }
+            </script>                    
+    </head>
+    <body>
+        <form name="calculator">
+            입력1: <input type="text" id="number1"><br />
+            입력2: <input type="text" id="number2"><br />
+            <input type="button" value="+" onclick="calc(1);">
+            <input type="button" value="-" onclick="calc(2);">
+            <input type="button" value="*" onclick="calc(3);">
+            <input type="button" value="/" onclick="calc(4);">
+            <input type="button" value="%" onclick="calc(5);">
+            <input type="button" value="x^y" onclick="calc(6);"><br />
+            계산 결과: <input type="text" id="total"><br />
+            </form>            
+    </body>
+</html>

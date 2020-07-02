@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <table>
+        <tr><td>시작값</td><td><input type="text" id="s"></td></tr>
+        <tr><td>끝값</td><td><input type="text" id="e"></td></tr>
+        <tr><td><input type="button" value="입력" onclick="sum();"></td><td><input type="text" id="result"></td></tr>
+    </table>
+    <script>
+    function sum() {
+        var s = 0;
+        var start = parseInt(document.getElementById("s").value);
+        var end = parseInt(document.getElementById("e").value); 
+
+        for (var i = start; i <= end; i++) {
+            s = s + i;
+        }
+        document.getElementById("result").value = s;
+    }
+    </script>
+</body>
+</html>

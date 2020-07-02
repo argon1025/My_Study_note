@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        function Gamestart() {
+            try{
+            var t1_1 = Number(Math.floor(Math.random() * 6));
+            var t1_2 = Number(Math.floor(Math.random() * 6));
+            var t1_3 = Number(Math.floor(Math.random() * 6));
+
+            var t2_1 = Number(Math.floor(Math.random() * 6));
+            var t2_2 = Number(Math.floor(Math.random() * 6));
+            var t2_3 = Number(Math.floor(Math.random() * 6));
+            
+            if((t1_1+t1_2+t1_3)<(t2_1+t2_2+t2_3)){
+                document.getElementById("t1").textContent="A팀: 첫째"+t1_1+"둘째:"+t1_2+"셋째:"+t1_3+"합:"+(t1_1+t1_2+t1_3);
+                document.getElementById("t2").textContent="B팀: 첫째"+t2_1+"둘째:"+t2_2+"셋째:"+t2_3+"합:"+(t2_1+t2_2+t2_3);
+                document.getElementById("t3").textContent="B팀승리";
+            }else{
+                document.getElementById("t1").textContent="A팀: 첫째"+t1_1+"둘째:"+t1_2+"셋째:"+t1_3+"합:"+(t1_1+t1_2+t1_3);
+                document.getElementById("t2").textContent="B팀: 첫째"+t2_1+"둘째:"+t2_2+"셋째:"+t2_3+"합:"+(t2_1+t2_2+t2_3);
+                document.getElementById("t3").textContent="A팀승리";
+            }
+        }catch(error){
+            console.log(error);
+        }
+
+        }
+    </script>
+    <h1>주사위 게임</h1>
+    <button type="button" onclick="Gamestart()">게임시작</button>
+    <p id="t1">A팀:</p>
+    <p id="t2">B팀:</p>
+    <p id="t3">결과:</p>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>객체 생성 방법 2</h2>
+    <script>
+        function Student(id, name, dept){
+            this.id = id;
+            this.name = name;
+            this.dept = dept;
+            //this.print=function(){
+            //    //document.write("yes");
+            //    document.write("학번:"+this.id+"<br />"+
+            //"이름:"+this.name+"<br />"+"학과:"+this.dept);
+            //}
+        }
+        Student.prototype.print=function(){
+            document.write("학번:"+this.id+"<br />"+"이름:"+this.name+"<br />"+"학과:"+this.dept);
+        }
+        kim = new Student("20170001","김길동","컴퓨터공학과");
+        kim.print();
+        
+        kim.subject1=90;
+        kim.subject2=97;
+        var ave;
+        //kim.average = function(){
+            Student.prototype.average=function(){
+            ave = (kim.subject1+kim.subject2)/2;
+            document.write("<br />평균점수"+ave+"<br />");
+        }
+        kim.average();
+    </script>
+</body>
+
+</html>

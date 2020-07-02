@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+        function calc(z) {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var sum;
+            switch(z){
+                case '+':
+                    sum = parseInt(x) + parseInt(y); document.getElementById("sum").value = sum;
+                    break;
+                case '-':
+                    sum = parseInt(x) - parseInt(y); document.getElementById("sum").value = sum;
+                    break; 
+                case '*':
+                    sum = parseInt(x) * parseInt(y); document.getElementById("sum").value = sum;
+                    break;
+                case '/':
+                    sum = parseInt(x) / parseInt(y); document.getElementById("sum").value = sum;
+                    break; 
+                default:
+                document.getElementById("sum").value ='error!'
+                break; 
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h3>20162252_이성록_계산기</h3>
+        <form name="myform" action="..." method="POST">첫번째 정수:        <input id="x" /><br />
+            두번째 정수:        <input id="y" /><br />
+            결과:         <input id="sum" /><br />
+            <input type="button" value="+" onclick="calc('+');" />
+            <input type="button" value="-" onclick="calc('-');" />
+            <input type="button" value="*" onclick="calc('*');" />
+            <input type="button" value="/" onclick="calc('/');" />
+        </form>
+    </body>
+</html>
+    

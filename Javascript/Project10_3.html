@@ -1,0 +1,27 @@
+<script>
+    var id;
+    var time=0;
+    function changeColor() {
+        id = setInterval(flashText, 1000);
+    }
+    function flashText() {
+        var elem = document.getElementById("target");
+        elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+        elem.style.backgroundColor = (elem.style.backgroundColor == "green") ? "yellow" : "green";
+        elem.innerHTML=time++;
+    }
+    function stopTextColor() {
+        clearInterval(id);
+    }
+    function resetTime() {
+        var elem = document.getElementById("target");
+        time=0;
+        elem.innerHTML=time;
+    }
+</script>
+<body>
+    <p id="target">timer :</p>
+    <button onclick="changeColor()">시작</button>
+    <button onclick="stopTextColor()">중지</button>
+    <button onclick="resetTime()">리셋</button>
+</body>

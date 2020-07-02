@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Test 1</title>
+    <script>
+        var a1 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var a2 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var a3 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var t_a = a1 + a2 + a3;
+        var b1 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var b2 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var b3 = Math.floor
+            (Math.random() * 10) % 6 + 1;
+        var t_b = b1 + b2 + b3;
+        document.write("A팀: " + t_a + ", B팀: " + t_b + " </br> ")
+        if (t_a == t_b) {
+            document.write("비김" + "<br>")
+        } else {
+            if (t_a > t_b) {
+                document.write("A팀승리!" + "<br>")
+            } else {
+                document.write("B팀승리!" + "<br>")
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

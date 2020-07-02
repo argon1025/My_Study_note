@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <table>
+        <tr><td><input type="button" value="시작" onclick="sum();"></td><td><input type="text" id="result"></td></tr>
+    </table>
+    <script>
+    function sum() {
+        var s = 0;
+        var start =  prompt("시작값을 입력하세요", "끝값보다 작게 입력하세요.");
+        var end =  prompt("끝값을 입력하세요", "시작값보다 크게 입력하세요.");
+
+        for (var i = start; i <= end; i++) {
+            s = s + i;
+        }
+        document.getElementById("result").value = s;
+    }
+    </script>
+</body>
+</html>

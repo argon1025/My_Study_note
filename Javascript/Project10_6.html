@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <script>
+        var expression = "";
+        var pow_1=0;
+        var pow_2=0;
+        function add(character) {
+            expression = expression + character;
+            document.getElementById("display").value = expression;
+            if(pow_1!=0){
+                pow_2=eval(expression);
+                alert(pow_1+"-"+pow_2+"거듭제곱을 실행합니다");
+                Pow(1);
+            }
+        }
+        function compute() {
+            document.getElementById("display").value = eval(expression);
+        }
+        function clearDisplay() {
+            expression = "";
+            document.getElementById("display").value = "0";
+        }
+        function Sin(){
+            document.getElementById("display").value = Math.sin(eval(expression));
+        }
+        function Cos(){
+            document.getElementById("display").value = Math.cos(eval(expression));
+        }
+        function Tan(){
+            document.getElementById("display").value = Math.tan(eval(expression));
+        }
+        function SQRT(){
+            document.getElementById("display").value = Math.sqrt(eval(expression));
+        }
+        function Log(){
+            document.getElementById("display").value = Math.log(eval(expression));
+        }
+        function Pow(conf_val){
+            if (conf_val == 0){
+                pow_1=eval(expression);
+                alert(pow_1+"에 대한 지수를 선택하세요");
+                expression = "";
+                document.getElementById("display").value = "0";
+            } else {
+                document.getElementById("display").value = Math.pow(pow_1,pow_2);
+            }
+        }
+        function Random(){
+            expression = expression + Math.floor(Math.random() * 100);
+            document.getElementById("display").value = expression;
+        }
+        function Round(){
+            document.getElementById("display").value = Math.round(eval(expression));
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        display <input id="display" value="0" size="30">
+        <br>
+        <input type="button" value=" 7 " onclick="add('7')">
+        <input type="button" value=" 8 " onclick="add('8')">
+        <input type="button" value=" 9 " onclick="add('9')">
+        <input type="button" value=" / " onclick="add('/')">
+        <br>
+        <input type="button" value=" 4 " onclick="add('4')">
+        <input type="button" value=" 5 " onclick="add('5')">
+        <input type="button" value=" 6 " onclick="add('6')">
+        <input type="button" value=" * " onclick="add('*')">
+        <br>
+        <input type="button" value=" 1 " onclick="add('1')">
+        <input type="button" value=" 2 " onclick="add('2')">
+        <input type="button" value=" 3 " onclick="add('3')">
+        <input type="button" value=" - " onclick="add('-')">
+        <br>
+        <input type="button" value=" 0 " onclick="add('0')">
+        <input type="button" value=" + " onclick="add('+')">
+        <input type="button" value=" % " onclick="add('%')">
+        <br>
+        <input type="button" value=" Sin " onclick="Sin()">
+        <input type="button" value=" Cos " onclick="Cos()">
+        <input type="button" value=" Tan " onclick="Tan()">
+        <input type="button" value=" SQRT " onclick="SQRT()">
+        <br>
+        <input type="button" value=" Log " onclick="Log()">
+        <input type="button" value=" Pow " onclick="Pow(0)">
+        <input type="button" value=" Random " onclick="Random()">
+        <input type="button" value=" Round " onclick="Round()">
+        <br>
+        <input type="button" value=" Clear " onclick="clearDisplay()">
+        <input type="button" value=" Enter " name="enter" onclick="compute()">
+    </form>
+</body>
+
+</html>

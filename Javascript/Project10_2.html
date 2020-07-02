@@ -1,0 +1,22 @@
+<script>
+    function removeNode(){
+        var lis = document.getElementById("mylist").getElementsByTagName("li");
+        document.getElementById("mylist").removeChild(lis[0]);
+    }
+    function addNode(){
+        var lis = document.createElement("li")
+        var textnode = document.createTextNode("===벽돌===");
+        lis.appendChild(textnode);
+        document.getElementById("mylist").appendChild(lis);
+        screen.height=10;
+    }
+</script>
+<body>
+    <ul id="mylist">
+        <li>===벽돌===</li>
+        <li>===벽돌===</li>
+        <li>===벽돌===</li>
+    </ul>
+    <button onclick="removeNode()">빼기</button>
+    <button onclick="addNode()">쌓기</button>
+</body>

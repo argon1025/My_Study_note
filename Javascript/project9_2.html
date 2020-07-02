@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>객체 생성 방법 1</h2>
+    <script>
+    var hong ={
+        studentID:"2019001",
+        name:"Hong Gil Dong",
+        department:"Computer Engineering",
+        
+        print: function(){
+            document.write("학번:"+this.studentID+"<br />"+
+            "이름:"+this.name+"<br />"+"학과:"+this.department);
+        }
+    }
+    hong.print();
+
+    hong.subject1=90;
+    hong.subject2=95;
+    var ave;
+    hong.average = function(){
+        ave = (hong.subject1+hong.subject2)/2;
+        document.write("<br />평균점수"+ave+"<br />");
+    }
+    hong.average();
+    </script>
+</body>
+
+</html>

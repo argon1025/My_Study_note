@@ -1,0 +1,26 @@
+<script>
+    function checkLength(elem, min, max) {
+        var s = elem.value;
+        var p = document.getElementById('pass').value;
+        var exp = /^[0-9]+$/;
+
+        if (s.length >= min && s.length <= max) {
+            alert(s+" 를 입력하셨네요!");
+        } else if(s.length >= max){
+            alert(max+"글자 이하로 입력해 주세요");
+            elem.focus();
+        } else if(s.length <= min){
+            alert(min + "글자 이상으로 입력해 주세요");
+            elem.focus();
+        }
+        if(p.match(exp)){
+            return true;
+        }else{
+            alert("숫자만 입력해 주세요");
+        }
+    }
+</script>
+<form>
+    암호: <input type='text' id='name' />비밀번호: <input type='text' id='pass' />
+    <input type='button' onclick="checkLength(document.getElementById('name'), 6, 8)" value='확인' />
+</form>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function changeColor(c) {
+            document.getElementById("target").style.backgroundColor = c;
+        }
+        function alrt_dog(){
+            var dog_list = document.getElementsByName("C1");
+            for(i=0;i<dog_list.length;i++){
+                if(dog_list[i].checked){
+                    alert(dog_list[i].value);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body id="target">
+    <form method="POST">
+        <img src="pome.png" width="200px">
+        <input type="radio" name="C1" value="DOG A">DOG A
+        <img src="poodle.png" width="200px">
+        <input type="radio" name="C1" value="DOG B">DOG B
+        <button onclick="alrt_dog()">강아지 선택</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+
+<body>
+    <div>
+        <p>과일 리스트</p>
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+        <li>멜론</li>
+        <li>수박</li>
+    </ul>
+</div>
+<button type="button" onclick="fruit()">과일선택</button>
+<script>
+    function fruit(){
+        var list = document.getElementsByTagName('ul')[0];
+        var allItems = list.getElementsByTagName('li');
+        alert(allItems[2].firstChild.data);
+
+        var myDiv=document.getElementsByTagName("div")[0];
+        var myP=myDiv.getElementsByTagName("p");
+        alert(myP[0].firstChild.data);
+
+        var myDiv=document.getElementsByTagName("div")[0];
+        var myUl=myDiv.getElementsByTagName("ul");
+        var myLi=myUl[0].getElementsByTagName("li");
+        alert(myLi[3].firstChild.data);
+
+
+    }
+</script>
+</body>
+
+</html>

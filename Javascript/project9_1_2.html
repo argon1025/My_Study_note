@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>객체 생성 방법 2</h2>
+    <script>
+        function Student(id, name, dept){
+            this.id = id;
+            this.name = name;
+            this.dept = dept;
+            this.print=function(){
+                //document.write("yes");
+                document.write("학번:"+this.id+"<br />"+
+            "이름:"+this.name+"<br />"+"학과:"+this.dept);
+            }
+        }
+        hong = new Student("20170001","홍길동","컴퓨터공학과");
+        hong.print();
+    </script>
+</body>
+
+</html>

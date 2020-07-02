@@ -1,0 +1,52 @@
+<IDOCTYPE html>
+    <html lang="en" xmlns="http://www.w3sorg/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <form name="myForm">
+            <tr><td>OS<input type="text" id="a0"><input type="text" id="b0"></td></tr><br />
+            <tr><td>DB<input type="text" id="a1"><input type="text" id="b1"></td></tr><br />
+            <tr><td>SW<input type="text" id="a2"><input type="text" id="b2"></td></tr><br />
+            <tr><td>CA<input type="text" id="a3"><input type="text" id="b3"></td></tr><br />
+            <tr><td>PR<input type="text" id="a4"><input type="text" id="b4"></td></tr><br />
+            <input type="button" value="입력" onclick="sum();"><br />
+            <input type="text" id="result"><br />
+        </form> 
+        <script>
+        function sum(){
+            var s = 0, a;
+            var jumsu = new Array();
+            for (var i = 0; i < 5; i++){
+                jumsu[i] = parseInt(document.getElementById("a"+i).value);
+                s = s + jumsu[i];
+                document.getElementById("b"+i).value = grade(jumsu[i]);
+            }
+                 a=s/5;
+                 document.getElementById("result").value = a;
+                average(s, 5);
+        }
+        function average(t, n){
+            return t/n;
+        }
+        function grade(g){
+            if(g >=90){
+                return "A";
+            }else if(g >=80){
+                return "B";
+
+            }else if(g >=70){
+                return "C";
+
+            }else if(g >=60){
+                return "D";
+
+            }else{
+                return "F";
+            }
+        }
+        </script>
+        </body>
+        </html> 
+    
