@@ -1,8 +1,8 @@
 # My Study note
 
-🇰🇷 공부한 기록
-🇺🇸 record of what I have studied
-🇯🇵 勉強した記録
+:kr: 공부한 기록
+:us: record of what I have studied
+:jp: 勉強した記録
 
 ---
 # Road map
