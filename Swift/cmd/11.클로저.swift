@@ -34,3 +34,29 @@ func calc(a:Int,b:Int,method: (Int,Int) -> Int)->Int{
 }
 
 print(calc(a:3,b:5,method: add))
+
+
+
+//클로저 고급
+
+//후행 클로저
+result = calc(a: 10, b: 10) { (left: Int, right: Int) -> Int in
+    return left + right
+}
+
+print(result) // 20
+
+//반환타입 생략
+
+result = calc(a: 10, b: 10, method: { (left: Int, right: Int) in
+    return left + right
+})
+
+print(result) // 20
+
+// 후행클로저와 함께 사용할 수도 있습니다
+result = calc(a: 10, b: 10) { (left: Int, right: Int) in
+    return left + right
+}
+
+print(result) // 20
