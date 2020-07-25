@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     var score:Int = 0 {
         didSet{
-            scoreLable.text = "스코어 : \(score)"
+            scoreLable.text = "\(score)회 뒤집었습니다"
         }
     }
     
