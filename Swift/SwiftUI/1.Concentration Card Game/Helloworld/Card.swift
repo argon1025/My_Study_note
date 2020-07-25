@@ -19,7 +19,7 @@ struct Card {
         self.cardId = Card.getUniqueCardId()
     }
     
-    static func getUniqueCardId() -> Int {
+    private static func getUniqueCardId() -> Int {
         CardIdFactory += 1
         return CardIdFactory
     }

@@ -10,7 +10,7 @@ import Foundation
 
 class Concentration
 {
-    var cards = [Card]()
+    private(set) var cards = [Card]()
     var cardOpen:Int?
     
     init(numberOfPairsCards: Int){

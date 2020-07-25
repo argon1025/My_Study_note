@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var score:Int = 0 {
+    private(set) var score:Int = 0 {
         didSet{
             scoreLable.text = "\(score)회 뒤집었습니다"
         }
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scoreLable: UILabel!
     // lazy 사용 초기화 didset 관찰자 사용불가
-    lazy var game:Concentration = Concentration(numberOfPairsCards: cardButtons.count / 2)
+    private lazy var game:Concentration = Concentration(numberOfPairsCards: cardButtons.count / 2)
     
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     //TODO: imoji return
-    func emoji(of index:Int) -> String{
+    private func emoji(of index:Int) -> String{
         let emojiChoice = ["","★","⎈","〒","⏣","⌚︎","◎","✚","☻","☂︎","✣"]
         return emojiChoice[index]
     }
