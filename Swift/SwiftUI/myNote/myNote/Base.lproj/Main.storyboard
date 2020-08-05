@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hcn-9b-06L">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -13,26 +13,26 @@
             <objects>
                 <tableViewController id="H1a-Gf-3Xd" customClass="memoListTableViewController" customModule="myNote" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a16-bk-dPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoList" textLabel="dQL-sS-TiY" detailTextLabel="rq5-8E-Kck" style="IBUITableViewCellStyleSubtitle" id="IWW-TL-7pc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoList" textLabel="dQL-sS-TiY" detailTextLabel="rq5-8E-Kck" style="IBUITableViewCellStyleSubtitle" id="IWW-TL-7pc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IWW-TL-7pc" id="r7P-xa-mOt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQL-sS-TiY">
-                                            <rect key="frame" x="16" y="10" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rq5-8E-Kck">
-                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Cw3-TA-KX6" kind="show" id="d9j-ux-GfJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,19 +62,56 @@
             </objects>
             <point key="canvasLocation" x="-281" y="-577"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="JTN-55-aKz">
+            <objects>
+                <viewController id="Cw3-TA-KX6" customClass="DetailViewController" customModule="myNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jb2-tg-ONZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afe-nJ-jyI">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="I4u-hn-Ta3"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-VJ-Jvp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="afe-nJ-jyI" firstAttribute="top" secondItem="0dr-VJ-Jvp" secondAttribute="bottom" id="YrL-oh-cOm"/>
+                            <constraint firstItem="afe-nJ-jyI" firstAttribute="bottom" secondItem="gxr-xT-ObK" secondAttribute="bottom" id="a2x-sE-v52"/>
+                            <constraint firstItem="0dr-VJ-Jvp" firstAttribute="leading" secondItem="gxr-xT-ObK" secondAttribute="leading" id="gdm-nQ-ku5"/>
+                            <constraint firstItem="0dr-VJ-Jvp" firstAttribute="top" secondItem="Jb2-tg-ONZ" secondAttribute="top" id="jrp-fZ-Y6Y"/>
+                            <constraint firstItem="0dr-VJ-Jvp" firstAttribute="trailing" secondItem="gxr-xT-ObK" secondAttribute="trailing" id="nxz-yt-26R"/>
+                            <constraint firstItem="afe-nJ-jyI" firstAttribute="trailing" secondItem="gxr-xT-ObK" secondAttribute="trailing" id="yYs-lj-s6i"/>
+                            <constraint firstItem="afe-nJ-jyI" firstAttribute="leading" secondItem="gxr-xT-ObK" secondAttribute="leading" id="z5v-mc-Icf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gxr-xT-ObK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ZC-w4-khv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gz-hz-rTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672.79999999999995" y="-240.14778325123154"/>
+        </scene>
         <!--새 메모-->
         <scene sceneID="yZH-fF-nVb">
             <objects>
                 <viewController id="sgY-78-zRc" customClass="createMemoViewController" customModule="myNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sId-jT-aeE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VUx-3S-dXs">
-                                <rect key="frame" x="0.0" y="66" width="375" height="581"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="658"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-DR-XbT">
-                                        <rect key="frame" x="37.5" y="0.0" width="300" height="32"/>
+                                        <rect key="frame" x="37.666666666666657" y="0.0" width="300" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="JqG-y6-C0M"/>
                                             <constraint firstAttribute="height" constant="32" id="URG-4x-v0i"/>
@@ -80,7 +120,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="organization-title"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-bJ-9HO">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="541"/>
+                                        <rect key="frame" x="0.0" y="40" width="375" height="618"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -128,7 +168,7 @@
             <objects>
                 <navigationController id="Hcn-9b-06L" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dLT-bf-46q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
