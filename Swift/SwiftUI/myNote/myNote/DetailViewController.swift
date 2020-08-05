@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var memo: memos?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +29,31 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+
+extension DetailViewController: UITableViewDataSource{
+    //호출해야하는 셀 수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    //셀 숫자대로 테이블 뷰를 업데이트
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.row {
+        case 0:
+            let target = tableView.dequeueReusableCell(withIdentifier: "memotitle", for: indexPath)
+            target.textLabel?.text = memo?.title
+            return target
+        case 1:
+            let target = tableView.dequeueReusableCell(withIdentifier: "memodetail", for: indexPath)
+            target.textLabel?.text = memo?.content
+            return target
+        default:
+            fatalError()
+        }
+        
+        
+    }
 }

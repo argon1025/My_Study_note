@@ -9,12 +9,21 @@
 import UIKit
 
 class memoListTableViewController: UITableViewController {
-    var test:Memo = Memo()
     var token: NSObjectProtocol?
+    
     
     deinit {
         if let token = token {
             NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    //디테일 뷰에 데이터 전달
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            if let vc = segue.destination as? DetailViewController{
+                vc.memo = Memo.memoData[indexPath.row]
+            }
         }
     }
 
