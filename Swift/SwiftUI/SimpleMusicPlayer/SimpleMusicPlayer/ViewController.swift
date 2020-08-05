@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var musicProgressBar: UISlider!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var playButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
