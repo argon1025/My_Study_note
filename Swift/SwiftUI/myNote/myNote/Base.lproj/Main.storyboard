@@ -74,11 +74,10 @@
                                         <rect key="frame" x="37.5" y="0.0" width="300" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="JqG-y6-C0M"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="RTh-MO-2uV"/>
                                             <constraint firstAttribute="height" constant="32" id="URG-4x-v0i"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" textContentType="organization-title"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-bJ-9HO">
                                         <rect key="frame" x="0.0" y="40" width="375" height="541"/>
@@ -104,9 +103,21 @@
                         <viewLayoutGuide key="safeArea" id="dsz-3P-QW0"/>
                     </view>
                     <navigationItem key="navigationItem" title="새 메모" id="kIe-TG-Lq1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cSi-7e-tpF"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sXl-Rb-ZvO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cSi-7e-tpF">
+                            <connections>
+                                <action selector="close:" destination="sgY-78-zRc" id="JRe-WW-Zp3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sXl-Rb-ZvO">
+                            <connections>
+                                <action selector="save:" destination="sgY-78-zRc" id="pCw-Iw-CuB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memotextview" destination="7kr-bJ-9HO" id="GDf-0k-CMh"/>
+                        <outlet property="memotitleview" destination="BVx-DR-XbT" id="VfN-ME-mRV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybl-KI-ygg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

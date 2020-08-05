@@ -11,6 +11,9 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    // MARK: IOS 12 이전의 fullscreen model 호완코드
+    var window: UIWindow?
 
 
 

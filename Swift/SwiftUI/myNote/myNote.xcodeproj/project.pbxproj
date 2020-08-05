@@ -16,6 +16,7 @@
 		45D8F2F724DABB1800D8E4D6 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8F2F624DABB1800D8E4D6 /* Memo.swift */; };
 		45D8F2F924DABF3800D8E4D6 /* memoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8F2F824DABF3800D8E4D6 /* memoListTableViewController.swift */; };
 		45D8F2FB24DACDA800D8E4D6 /* createMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8F2FA24DACDA800D8E4D6 /* createMemoViewController.swift */; };
+		45D8F2FD24DAD03100D8E4D6 /* alrtmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8F2FC24DAD03100D8E4D6 /* alrtmanager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		45D8F2F624DABB1800D8E4D6 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		45D8F2F824DABF3800D8E4D6 /* memoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoListTableViewController.swift; sourceTree = "<group>"; };
 		45D8F2FA24DACDA800D8E4D6 /* createMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createMemoViewController.swift; sourceTree = "<group>"; };
+		45D8F2FC24DAD03100D8E4D6 /* alrtmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alrtmanager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				45D8F2F624DABB1800D8E4D6 /* Memo.swift */,
+				45D8F2FC24DAD03100D8E4D6 /* alrtmanager.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				45D8F2E124DAB2E000D8E4D6 /* SceneDelegate.swift in Sources */,
 				45D8F2E924DAB2E000D8E4D6 /* myNote.xcdatamodeld in Sources */,
 				45D8F2F924DABF3800D8E4D6 /* memoListTableViewController.swift in Sources */,
+				45D8F2FD24DAD03100D8E4D6 /* alrtmanager.swift in Sources */,
 				45D8F2F724DABB1800D8E4D6 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

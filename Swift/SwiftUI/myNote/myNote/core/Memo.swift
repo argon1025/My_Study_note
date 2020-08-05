@@ -9,14 +9,12 @@
 import Foundation
 
 class Memo{
-    private(set) var memoData = [memos]()
+    private(set) static var memoData = [memos]()
     
-    init() {
-        memoData.append(memos(title: "test",content: "content"))
-    }
     
-    func createMemo(title: String,content: String){
-        memoData.append(memos(title: title,content: content))
+    static func createMemo(title: String,content: String){
+        print("title:\(title) content:\(content)")
+        Memo.memoData.append(memos(title: title,content: content))
     }
     
 }

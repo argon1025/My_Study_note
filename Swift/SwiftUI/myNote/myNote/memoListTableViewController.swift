@@ -10,9 +10,21 @@ import UIKit
 
 class memoListTableViewController: UITableViewController {
     var test:Memo = Memo()
+    var token: NSObjectProtocol?
+    
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Notification 옵저버 구현
+        token=NotificationCenter.default.addObserver(forName: memoListTableViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in
+            self?.tableView.reloadData()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,12 +32,22 @@ class memoListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    /*
+    // MARK: - 뷰컨트롤러가 화면에 표시되기 직전에 호출 (뷰 업데이트) IOS12 이전버전에만 해당
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        print(#function)
+    }
+    */
+    
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return test.memoData.count
+        return Memo.memoData.count
     }
 
     
@@ -34,7 +56,7 @@ class memoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memoList", for: indexPath)
 
         // Configure the cell...
-        let target = test.memoData[indexPath.row]
+        let target = Memo.memoData[indexPath.row]
         cell.textLabel?.text = target.title
         cell.detailTextLabel?.text = target.date.description
         return cell
