@@ -20,6 +20,7 @@
 		451C1B0524DC2B1900588368 /* hiddenlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 451C1AF824DC2B1900588368 /* hiddenlake.jpg */; };
 		451C1B0624DC2B1900588368 /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 451C1AF924DC2B1900588368 /* stmarylake.jpg */; };
 		451C1B0724DC2B1900588368 /* lakemcdonald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 451C1AFA24DC2B1900588368 /* lakemcdonald.jpg */; };
+		451C1B0924DC2DB000588368 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C1B0824DC2DB000588368 /* LandmarkList.swift */; };
 		45BE92BA24DBC5FF00FA47E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE92B924DBC5FF00FA47E1 /* AppDelegate.swift */; };
 		45BE92BC24DBC5FF00FA47E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE92BB24DBC5FF00FA47E1 /* SceneDelegate.swift */; };
 		45BE92BE24DBC5FF00FA47E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE92BD24DBC5FF00FA47E1 /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 		451C1AF824DC2B1900588368 /* hiddenlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hiddenlake.jpg; path = ../../../../../../../../Downloads/BuildingListsAndNavigation/StartingPoint/Landmarks/Landmarks/Resources/hiddenlake.jpg; sourceTree = "<group>"; };
 		451C1AF924DC2B1900588368 /* stmarylake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stmarylake.jpg; path = ../../../../../../../../Downloads/BuildingListsAndNavigation/StartingPoint/Landmarks/Landmarks/Resources/stmarylake.jpg; sourceTree = "<group>"; };
 		451C1AFA24DC2B1900588368 /* lakemcdonald.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lakemcdonald.jpg; path = ../../../../../../../../Downloads/BuildingListsAndNavigation/StartingPoint/Landmarks/Landmarks/Resources/lakemcdonald.jpg; sourceTree = "<group>"; };
+		451C1B0824DC2DB000588368 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		45BE92B624DBC5FF00FA47E1 /* HelloSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BE92B924DBC5FF00FA47E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BE92BB24DBC5FF00FA47E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				45BE92BF24DBC60100FA47E1 /* Assets.xcassets */,
 				45BE92C424DBC60100FA47E1 /* LaunchScreen.storyboard */,
 				45BE92C724DBC60100FA47E1 /* Info.plist */,
+				451C1B0824DC2DB000588368 /* LandmarkList.swift */,
 			);
 			path = HelloSwiftUI;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				45BE92BA24DBC5FF00FA47E1 /* AppDelegate.swift in Sources */,
 				45BE92CE24DBDFF900FA47E1 /* CircleImage.swift in Sources */,
 				45BE92D024DBE32200FA47E1 /* MapView.swift in Sources */,
+				451C1B0924DC2DB000588368 /* LandmarkList.swift in Sources */,
 				45BE92BC24DBC5FF00FA47E1 /* SceneDelegate.swift in Sources */,
 				45BE92BE24DBC5FF00FA47E1 /* ContentView.swift in Sources */,
 				45BE92D824DC282900FA47E1 /* LandmarkRow.swift in Sources */,
