@@ -22,6 +22,12 @@ struct LandmarkRow: View {
                     .font(.subheadline)
             }
             Spacer()
+            if landmark.isFavorite ?? false {
+                Image(systemName: "star.fill")
+                    .padding(.trailing, 10.0)
+                    .imageScale(.medium)
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }

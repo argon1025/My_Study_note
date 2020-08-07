@@ -9,34 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    var landmark: Landmark
+    
     var body: some View {
         VStack {
             MapView()
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.top)
-            CircleImage().frame(height:200)
-            .offset(y: -130)
+            CircleImage(image: landmark.image).frame(height:200)
+            .offset(y: -150)
             .padding(.bottom, -170)
             VStack(alignment: .leading, spacing: 0.0) {
                 HStack {
-                    Text("Turtle Rock")
+                    Text(landmark.name)
                         .font(.title)
                 }
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.state)
                         .font(.subheadline)
-                    Text("California")
+                    Text(landmark.park)
                         .font(.subheadline)
                 }
             }.padding()
             Spacer()
         }
+        .navigationBarTitle(Text(landmark.name), displayMode: .inline)
             
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(landmark: landmarkData[0])
     }
 }
