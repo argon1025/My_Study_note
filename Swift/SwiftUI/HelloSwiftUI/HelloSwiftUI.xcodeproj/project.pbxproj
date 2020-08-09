@@ -35,6 +35,7 @@
 		45C9A8CD24E03F5900207D50 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A8CC24E03F5900207D50 /* Badge.swift */; };
 		45C9A8CF24E03F9900207D50 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A8CE24E03F9900207D50 /* HexagonParameters.swift */; };
 		45C9A8D124E0413900207D50 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A8D024E0413900207D50 /* BadgeSymbol.swift */; };
+		45C9A8D324E0433C00207D50 /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A8D224E0433C00207D50 /* RotatedBadgeSymbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		45C9A8CC24E03F5900207D50 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		45C9A8CE24E03F9900207D50 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		45C9A8D024E0413900207D50 /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
+		45C9A8D224E0433C00207D50 /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				45BE92CF24DBE32200FA47E1 /* MapView.swift */,
 				45C9A8CC24E03F5900207D50 /* Badge.swift */,
 				45C9A8D024E0413900207D50 /* BadgeSymbol.swift */,
+				45C9A8D224E0433C00207D50 /* RotatedBadgeSymbol.swift */,
 			);
 			path = wizet;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				45BE92BA24DBC5FF00FA47E1 /* AppDelegate.swift in Sources */,
 				45C9A8CD24E03F5900207D50 /* Badge.swift in Sources */,
 				45BE92CE24DBDFF900FA47E1 /* CircleImage.swift in Sources */,
+				45C9A8D324E0433C00207D50 /* RotatedBadgeSymbol.swift in Sources */,
 				45C9A8D124E0413900207D50 /* BadgeSymbol.swift in Sources */,
 				45BE92D024DBE32200FA47E1 /* MapView.swift in Sources */,
 				451C1B0924DC2DB000588368 /* LandmarkList.swift in Sources */,
