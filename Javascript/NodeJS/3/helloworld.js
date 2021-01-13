@@ -35,4 +35,4 @@ var app = http.createServer(function(request,response){
     });
     app.listen(80);
 
-    //http://127.0.0.1/?id=description
+    //http://127.0.0.1/?id=description&title=hi
