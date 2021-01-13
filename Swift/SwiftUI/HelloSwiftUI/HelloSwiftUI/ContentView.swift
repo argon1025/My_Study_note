@@ -20,7 +20,7 @@ struct ContentView: View {
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.top)
             CircleImage(image: landmark.image).frame(height:200)
-            .offset(y: -150)
+            .offset(y: -120)
             .padding(.bottom, -170)
             VStack(alignment: .leading, spacing: 0.0) {
                 HStack {
