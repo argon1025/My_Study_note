@@ -17,7 +17,7 @@ var app = http.createServer(function(request,response){
         request.on('end',function(){
             console.log(qs.parse(body));
         });
-    }else if(pathname === '/form.html'){
+    }else if(pathname === '/form'){
         var form = `
         <!doctype html>
         <html>
