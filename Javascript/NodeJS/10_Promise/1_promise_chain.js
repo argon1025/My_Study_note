@@ -1,4 +1,4 @@
-/*
+
 //기본적인 프로미스 사용
 const promise_1 = new Promise((resolve, reject)=>{
     if(false){
@@ -38,7 +38,6 @@ return new Promise((resolve,reject) =>{
 .then(val => console.log(val))
 
 
-*/
 //에러 핸들링
 
 
