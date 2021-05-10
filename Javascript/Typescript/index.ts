@@ -35,3 +35,17 @@ class Person{
 let seongRokLee_3 = new Person()
 seongRokLee_3.name = "typescript";
 console.log(seongRokLee_3);
+
+// 인터페이스를 통한 클래스 구현
+interface Person_1{
+    name: string|undefined,
+    etc?: object,
+    getName:object,
+}
+class Person_11 implements Person_1{
+    constructor(public name:string|undefined){}
+
+    public getName():string|undefined{
+        return this.name;
+    }
+}
