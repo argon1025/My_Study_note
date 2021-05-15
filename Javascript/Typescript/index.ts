@@ -1,51 +1,58 @@
-// 인터페이스 연습 1번
-interface userData{
+// Array
+let testArray1:number[] = [1,2,3,4];
+let testArray2:(string|number)[] = [1,2,3,"lol"];
+
+// Tuple
+let testTuple:[string,number] = ["lol",1234];
+
+// Enum
+enum testEnum{
+    kakao, // 0
+    daum, // 1
+    naver // 2
+};
+enum testEnum1{
+    kakao=23,
+    daum=24,
+    naver // 24+1
+};
+
+console.log(testEnum1.naver);
+console.log(testEnum1[23]);
+
+// -----------------------------------------------------
+function testFunc(id:number,name:string):object{
+    console.log(`${id}, ${name}`);
+    return {id, name};
+}
+let result:object = testFunc(1,"lol");
+
+// -----------------------------------------------------
+
+let testExpression:(n:number)=> string = function(n:number){
+return testEnum1[n];
+}
+console.log(testExpression(23));
+
+// -----------------------------------------------------
+let testObject:{version:number,desc:string,getVersion:()=>void,[propTest:string]:any} = {
+    version:1,
+    desc:"lol",
+    getVersion(){
+        return this.version;
+    },
+    test:1,
+    test1:2,
+    test3:"123"
+};
+
+// ------------------------------------------------------
+type userData = {
     name:string,
     age:number,
-    address:string|undefined, // string과 undifined 타입 두개 모두 허용한다
-    etc?:object, // 선택 속성
+    [elsename:string]:any
 }
-// 인터페이스 1번 생성
-const seongRokLee_1: userData = {name:"leeseongrok", age:25,address:undefined};
-// 인터페이스 1번 출력
-console.log(seongRokLee_1);
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-
-// 익명 인터페이스
-const seongRokLee_2:{name:string,age:number,etc?:boolean} = {name:"leeseongrok",age:1};
-console.log(seongRokLee_2);
-
-// 익명 인터페이스를 이용한 함수 작성
-function helloWorld_1(info:{type: string,message:string,errorCode:number}):string{
-    return `${info.type} ${info.message} ${info.errorCode}`
-}
-console.log(helloWorld_1({type:"systemLog",message:"helloworld!",errorCode:1}));
-///////////////////////////////////////////////////////////////////////////////////////////////
-
-//클래스
-class Person{
-    public name: string|undefined //전체 액세스 허용
-    private age: number|undefined //클래스 내에서만 액세스 가능
-    protected etc?: object // 하위 클래스에서만 액세스 가능
-    constructor(){
-        this.age = 25;
-    }
-}
-let seongRokLee_3 = new Person()
-seongRokLee_3.name = "typescript";
-console.log(seongRokLee_3);
-
-// 인터페이스를 통한 클래스 구현
-interface Person_1{
-    name: string|undefined,
-    etc?: object,
-    getName:object,
-}
-class Person_11 implements Person_1{
-    constructor(public name:string|undefined){}
-
-    public getName():string|undefined{
-        return this.name;
-    }
+let Leeseongrok:userData = {
+    name:"leeseongrok",
+    age:24
 }
